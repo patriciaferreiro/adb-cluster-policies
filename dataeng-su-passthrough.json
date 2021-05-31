@@ -1,0 +1,44 @@
+{
+  "spark_conf.spark.databricks.passthrough.enabled": {
+    "type": "fixed",
+    "value": "true"
+  },
+  "spark_version": {
+    "type": "regex",
+    "pattern": "8.[0-9].x-scala.*"
+  },
+  "docker_image.url": {
+    "type": "forbidden",
+    "hidden": true
+  },
+  "node_type_id": {
+    "type": "allowlist",
+    "values": [
+      "Standard_DS3_v2",
+      "Standard_DS4_v2",
+      "Standard_DS5_v2"
+    ],
+    "defaultValue": "Standard_DS3_v2"
+  },
+  "autotermination_minutes": {
+    "type": "fixed",
+    "value": 30,
+    "hidden": true
+  },
+  "spark_conf.spark.databricks.repl.allowedLanguages": {
+    "type": "fixed",
+    "value": "scala,python,r,sql"
+  },
+  "custom_tags.CostCenter": {
+    "type": "allowlist",
+    "values": [
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  "custom_tags.Team": {
+    "type": "fixed",
+    "value": "data_engineering"
+  }
+}
